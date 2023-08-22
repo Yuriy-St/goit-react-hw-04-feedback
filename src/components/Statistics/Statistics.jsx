@@ -3,15 +3,23 @@ import { StyledStatistics } from './Statistics.styled';
 
 import StatLine from './StatLine';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <StyledStatistics>
-    <StatLine>Good: {good}</StatLine>
-    <StatLine>Neutral: {neutral}</StatLine>
-    <StatLine>Bad: {bad}</StatLine>
-    <StatLine>Total: {total}</StatLine>
-    <StatLine>Positive feedback: {positivePercentage}%</StatLine>
-  </StyledStatistics>
-);
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
+  return (
+    <StyledStatistics>
+      <StatLine>Good: {good}</StatLine>
+      <StatLine>Neutral: {neutral}</StatLine>
+      <StatLine>Bad: {bad}</StatLine>
+      <StatLine>Total: {total}</StatLine>
+      <StatLine>Positive feedback: {positivePercentage}%</StatLine>
+    </StyledStatistics>
+  );
+}
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
@@ -20,5 +28,3 @@ Statistics.propTypes = {
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;

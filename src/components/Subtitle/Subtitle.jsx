@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { StyledSubtitle } from './Subtitle.styled';
 
-const Subtitle = ({ children }) => <StyledSubtitle>{children}</StyledSubtitle>;
+export default function Subtitle({ children }) {
+  return <StyledSubtitle>{children}</StyledSubtitle>;
+}
 
 Subtitle.propTypes = {
   children: PropTypes.node,
 };
-
-export default Subtitle;

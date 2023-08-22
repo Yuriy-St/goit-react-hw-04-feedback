@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import Subtitle from 'components/Subtitle';
 import { StyledSection } from './Section.styled';
 
-const Section = ({ title, children }) => (
-  <StyledSection>
-    <Subtitle>{title}</Subtitle>
-    {children}
-  </StyledSection>
-);
-
-export default Section;
+export default function Section({ title, children }) {
+  return (
+    <StyledSection>
+      <Subtitle>{title}</Subtitle>
+      {children}
+    </StyledSection>
+  );
+}
 
 Section.propTypes = {
   title: PropTypes.string,
